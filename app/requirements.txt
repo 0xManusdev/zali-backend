@@ -5,3 +5,5 @@ pillow
 matplotlib
 numpy
 gunicorn
+google-genai
+python-dotenv
