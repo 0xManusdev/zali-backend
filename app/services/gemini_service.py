@@ -43,6 +43,7 @@ class GeminiService:
             - recommendation: Brief technical diagnostic and immediate action (max 2 sentences).
             - water_needed_mm: Numerical irrigation volume (e.g., 20).
             - frequency: Technical irrigation frequency (e.g., 'Every 48h').
+            - best_watering_time: Best time of day to water this plant given its disease (e.g., 'Early morning, 6-8 AM').
             - notes: List of 3 concise, science-based protocols for treatment.
             
             Language: English. No markdown, no preamble.
@@ -57,6 +58,7 @@ class GeminiService:
             - recommendation: Brief technical growth optimization tip (max 1 sentence).
             - water_needed_mm: Numerical baseline irrigation volume (e.g., 25).
             - frequency: Maintenance irrigation frequency (e.g., 'Every 72h').
+            - best_watering_time: Best time of day to water this plant (e.g., 'Early morning, 6-8 AM').
             - notes: List of 3 concise best practices for health maintenance.
             
             Language: English. No markdown, no preamble.
