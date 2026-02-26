@@ -10,12 +10,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy only requirements first for caching
-COPY app/requirements.txt /app/requirements.txt
+COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r /app/requirements.txt
 
-# Copy app
-COPY zali-backend/app /app
+# Copy all app code (depuis le dossier app)
+COPY . /app
 
 # Ensure uploads dir exists
 RUN mkdir -p /app/uploads
@@ -24,7 +24,7 @@ RUN mkdir -p /app/uploads
 ENV PORT=8000
 
 # Start script to allow $PORT
-COPY zali-backend/start.sh /start.sh
+COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
 EXPOSE 8000
